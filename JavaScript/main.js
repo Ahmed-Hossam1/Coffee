@@ -9,6 +9,12 @@ window.onscroll = function () {
   }
 };
 
+//  nav country
+const nav_country = document.getElementById("nav-country");
+nav_country.innerHTML = JSON.parse(
+  localStorage.getItem("location")
+)?.countryCode;
+
 // scroll to top of page
 const btn_to_top = document.querySelector(".btn-to-top");
 

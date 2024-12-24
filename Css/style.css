@@ -67,3 +67,10 @@ body {
 .error {
   color: red;
 }
+
+/* sweet gallery */
+
+#sweet-gallery div.image:hover > .text {
+  display: block;
+  transition: ease 0.4s;
+}
