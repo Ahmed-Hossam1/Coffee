@@ -3,6 +3,7 @@ const password = document.getElementById("password");
 const LoginForm = document.getElementById("Login");
 const usernameError = document.getElementById("usernameError");
 const passwordError = document.getElementById("passwordError");
+const errors = document.getElementById("errors");
 const loginbtn = document.getElementById("loginbtn");
 
 let isLoading = false;
@@ -13,13 +14,11 @@ LoginForm.addEventListener("submit", (e) => {
   //   Client Validation
   if (username.value.trim() === "") {
     usernameError.textContent = "Please enter your username";
-    usernameError.style.color = "red";
   } else {
     usernameError.textContent = "";
   }
   if (password.value.trim() === "") {
     passwordError.textContent = "Please enter your password";
-    passwordError.style.color = "red";
   } else {
     passwordError.textContent = "";
   }
@@ -51,11 +50,8 @@ const Login = async () => {
     location.href = "Home.html";
   } catch (error) {
     // server validation
-    Swal.fire({
-      icon: "error",
-      title: "Oops...",
-      text: error.response.data.message,
-    });
+
+    errors.textContent = error.response.data.message;
     console.log("error", error.response.data.message);
   } finally {
     isLoading = false;
