@@ -22,14 +22,17 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../css/style.css" />
-
     <title>coffee shop</title>
   </head>
 
   <body>
     <div class="flex justify-center items-center h-screen">
       <form class="max-w-md w-full" method="post" id="Login">
-        <p id="errors"></p>
+        <h1
+          class="mb-7 text-blue-500 font-bold text-xl md:text-2xl lg:text-4xl uppercase text-center"
+        >
+          login
+        </h1>
         <div class="mb-5">
           <label
             for="username"
@@ -57,14 +60,23 @@
           />
           <p id="passwordError"></p>
         </div>
+        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+          don't have an account?
+          <a
+            href="signup.html"
+            class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >sign up</a
+          >.
+        </p>
         <button
-          type="submit"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          id="loginbtn"
+          class="text-white capitalize w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
-          Submit
+          login
         </button>
       </form>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../JavaScript/login.js"></script>
   </body>

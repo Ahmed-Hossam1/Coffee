@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="coffee shop" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Import Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Import Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- icon  -->
+    <link rel="icon" href="../Images/logo.png" />
+
+    <!-- axios -->
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>coffee shop</title>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center h-screen">
+      <form class="max-w-md w-full" method="post" id="signup">
+        <h1
+          class="mb-7 text-blue-500 font-bold text-xl md:text-2xl lg:text-4xl uppercase text-center"
+        >
+          sign up
+        </h1>
+        <div class="mb-5">
+          <label
+            for="name"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your name</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+          />
+          <p id="nameError" class="error"></p>
+        </div>
+
+        <div class="mb-5">
+          <label
+            for="username"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your username</label
+          >
+          <input
+            type="text"
+            id="username"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="example"
+          />
+          <p id="usernameError" class="error"></p>
+        </div>
+
+        <div class="mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+            placeholder="name@flowbite.com"
+          />
+          <p id="emailError" class="error"></p>
+        </div>
+
+        <div class="mb-5">
+          <label
+            for="password"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your password</label
+          >
+          <input
+            type="password"
+            id="password"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+          />
+          <p id="passwordError" class="error"></p>
+        </div>
+
+        <div class="mb-5">
+          <label
+            for="repeat-password"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Repeat password</label
+          >
+          <input
+            type="password"
+            id="repeat-password"
+            class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+          />
+          <p id="repeat-passwordError" class="error"></p>
+        </div>
+        <div class="mb-5">
+          <label
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            for="file_input"
+            >Upload file</label
+          >
+          <input
+            class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+            id="file_input"
+            type="file"
+          />
+
+          <p id="file_inputError" class="error"></p>
+        </div>
+
+        <div class="flex items-start mb-5">
+          <div class="flex items-center h-5">
+            <input
+              id="terms"
+              type="checkbox"
+              class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+            />
+          </div>
+          <label
+            for="terms"
+            class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >I agree with the
+            <a href="#" class="text-blue-600 hover:underline dark:text-blue-500"
+              >terms and conditions</a
+            ></label
+          >
+        </div>
+        <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+          have an account?
+          <a
+            href="login.html"
+            class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+            >Login</a
+          >.
+        </p>
+        <button
+          type="submit"
+          id="signupbtn"
+          class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Register new account
+        </button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JavaScript/signup.js"></script>
+  </body>
+</html>

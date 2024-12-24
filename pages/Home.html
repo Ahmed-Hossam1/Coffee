@@ -13,10 +13,12 @@
       href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
       rel="stylesheet"
     />
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- icon  -->
     <link rel="icon" href="../Images/logo.png">
-
 
     <!-- CSS -->
      <link rel="stylesheet" href="../css/style.css">
@@ -24,9 +26,6 @@
      <title>coffee shop</title>
   </head>
   <body>
-
-    
-
 
     <!-- Nav -->
     <nav id="nav" class="fixed top-0 z-50 w-full border-gray-200 dark:bg-gray-900">
@@ -37,12 +36,12 @@
           href="http://127.0.0.1:5500/pages/Home.html#hero"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <img src="../Images/logo-light.png" class="h-14" alt="Flowbite Logo" />
+          <img src="../Images/logo-light.png"  class="h-14" alt="Flowbite Logo" />
         </a>
         <div
           class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
         >
-          <!-- <button
+          <button
             type="button"
             class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
             id="user-menu-button"
@@ -52,14 +51,15 @@
           >
             <span class="sr-only">Open user menu</span>
             <img
+             id= "user-photo"
               class="w-8 h-8 rounded-full"
               src="../Images/blog-1-img-1.jpg"
               alt="user photo"
             />
 
-          </button> -->
+          </button>
           
-          <a href="Login.html">
+          <a href="Login.html" id="loginbtn">
           <button class="text-white/90 border border-gray-500 hover:bg-[#BE9C79] hover:border-transparent transition-all duration-200 rounded-lg px-6 py-2">
               Login
             </button>
@@ -70,11 +70,11 @@
             id="user-dropdown"
           >
             <div class="px-4 py-3">
-              <span class="block text-sm text-gray-900 dark:text-white"
+              <span class="block text-sm text-gray-900 dark:text-white" id="user-name"
                 >Bonnie Green</span
               >
               <span
-                class="block text-sm text-gray-500 truncate dark:text-gray-400"
+                class="block text-sm text-gray-500 truncate dark:text-gray-400" id="user-email"
                 >name@flowbite.com</span
               >
             </div>
@@ -82,12 +82,12 @@
 
               <li>
                 <a
-                  href="#"
+                  href="profile.html"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                   >profile</a
                 >
               </li>
-              <li>
+              <li id="signout">
                 <a
                   href="#"
                   class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-600 hover:text-white dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
@@ -213,6 +213,12 @@
       </div>
     </nav>
 
+    <!-- Btn to top of page -->
+
+    <div class="btn-to-top fixed z-10 bottom-10 right-5 bg-[#BE9C79] w-10 h-10 flex justify-center items-center rounded-sm text-white cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+    </div>
+
     <!-- Hero -->
     <section id="hero">
       <div
@@ -243,8 +249,6 @@
       </div>
     </section>
 
-   
-
     <!-- Delicious Offer -->
     <section id="delicious-offer" class="py-14">
       <div class="container mx-auto">
@@ -258,7 +262,7 @@
           </p>
         </div>
         <div class="flex flex-col justify-center items-center md:flex-row gap-5">
-          <div class="max-w-sm  flex flex-col justify-center items-center text-center">
+          <div  data-aos="fade-right" data-aos-duration="500" class="box max-w-sm  flex flex-col justify-center items-center text-center">
             <img src="../Images/h2-custom-icon-5.png" alt="" />
             <a href="#">
               <h5
@@ -272,7 +276,8 @@
               your weekly benefits:
             </p>
           </div>
-            <div class="max-w-sm flex flex-col justify-center items-center text-center">
+
+            <div data-aos="fade-up"  data-aos-duration="500" data-aos-delay="200" class="box max-w-sm flex flex-col justify-center items-center text-center">
             <img src="../Images/h2-custom-icon-6.png" alt="" />
             <a href="#">
               <h5
@@ -284,7 +289,8 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, explicabo?
             </p>
           </div>
-            <div class="max-w-sm flex flex-col justify-center items-center text-center">
+
+            <div data-aos="fade-down" data-aos-duration="500"  data-aos-delay="250" class="box max-w-sm flex flex-col justify-center items-center text-center">
             <img src="../Images/h2-custom-icon-7.png" alt="" />
             <a href="#">
               <h5
@@ -297,8 +303,9 @@
               Go to this step by step guideline process on how to certify for
               your weekly benefits:
             </p>
-          </div>
-            <div class="max-w-sm flex flex-col justify-center items-center text-center">
+            </div>
+
+            <div data-aos="fade-left" data-aos-duration="500"  data-aos-delay="300" class="box max-w-sm flex flex-col justify-center items-center text-center">
             <img src="../Images/h2-custom-icon-8.png" alt="" />
             <a href="#">
               <h5
@@ -330,7 +337,7 @@
 
         <div class="flex flex-col flex-wrap justify-center items-center md:flex-row gap-5">
 
-<div class="max-w-sm">
+<div class="max-w-sm" data-aos="fade-right"  data-aos-duration="700"  >
   <a href="#">
       <img class="rounded-lg" src="../Images/blog-1-img-1.jpg" alt="" />
   </a>
@@ -347,7 +354,8 @@
       </a>
   </div>
 </div>
-<div class="max-w-sm">
+
+<div class="max-w-sm" data-aos="fade-up"  data-aos-duration="700" data-aos-delay="200" >
   <a href="#">
       <img class="rounded-lg" src="../Images/blog-1-img-2.jpg" alt="" />
   </a>
@@ -364,7 +372,7 @@
       </a>
   </div>
 </div>
-<div class="max-w-sm">
+<div class="max-w-sm" data-aos="fade-left"  data-aos-duration="700" data-aos-delay="300" >
   <a href="#">
       <img class="rounded-lg" src="../Images/blog-1-img-3.jpg" alt="" />
   </a>
@@ -395,22 +403,22 @@
         <div class="container mx-auto">
           <div class="flex flex-col justify-center items-center text-center md:flex-row gap-5">
           <div class="number-box">
-            <h2 class="text-[#BE9C79] text-4xl mb-3">250</h2>
+            <h2 class="number text-[#BE9C79] text-4xl mb-3" data-goal="250">0</h2>
             <h3 class="text-xl capialize mb-2">Varieties of Coffee</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, omnis.</p>
           </div>
           <div class="number-box">
-            <h2 class="text-[#BE9C79] text-4xl mb-3">123</h2>
+            <h2 class="number text-[#BE9C79] text-4xl mb-3" data-goal="500">0</h2>
             <h3 class="text-xl capialize mb-2">Hours of Testing</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, omnis.</p>
           </div>
           <div class="number-box">
-            <h2 class="text-[#BE9C79] text-4xl mb-3">321</h2>
+            <h2 class="number text-[#BE9C79] text-4xl mb-3" data-goal="400">0</h2>
             <h3 class="text-xl capialize mb-2">Coffee Markets</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, omnis.</p>
           </div>
           <div class="number-box">
-            <h2 class="text-[#BE9C79] text-4xl mb-3">220</h2>
+            <h2 class="number text-[#BE9C79] text-4xl mb-3" data-goal="300">0</h2>
             <h3 class="text-xl capialize mb-2">Coffee Brands</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta, omnis.</p>
           </div>
@@ -420,7 +428,7 @@
       </div>
 
       <!-- online coffee -->
-       <section id="online-coffee" class="py-14 " style="background-image: url(../Images/new-new-h1-bacground-img-3.jpg) ;">
+       <section id="online-coffee"  class="py-14 " style="background-image: url(../Images/new-new-h1-bacground-img-3.jpg) ;">
         <div class="container mx-auto">
           <div class="heading flex flex-col justify-center items-center text-center mb-7 px-8">
             <h1 class="mb-3 text-xl md:text-2xl lg:text-4xl uppercase">Online Coffee shop</h1>
@@ -433,28 +441,28 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-            <div class="online-coffee-img flex flex-col justify-center items-center">
+            <div data-aos="fade-right"  data-aos-duration="500" data-aos-delay="200"  class="online-coffee-img flex flex-col justify-center items-center">
               <img src="../Images/product-img-1-768x768.png" class="w-72" alt="img" />
               <div class="content text-center">
                 <h2>Brazilian Coffee</h2>
                 <span class="text-[#A6A6A6]" >$25.00</span>
               </div>
             </div>
-            <div class="online-coffee-img flex  flex-col justify-center items-center">
+            <div data-aos="fade-right"  data-aos-duration="500" data-aos-delay="500"  class="online-coffee-img flex  flex-col justify-center items-center">
               <img src="../Images/product-img-3-768x768.png"  class="w-72" alt="img" />
               <div class="content  text-center">
                 <h2>Kenya Coffee</h2>
                 <span  class="text-[#A6A6A6]">$13.00</span>
               </div>
             </div>
-            <div class="online-coffee-img flex flex-col justify-center items-center">
+            <div data-aos="fade-right"  data-aos-duration="500" data-aos-delay="1000" class="online-coffee-img flex flex-col justify-center items-center">
               <img src="../Images/product-img-5-768x768.png" class="w-72" alt="img" />
               <div class="content  text-center">
                 <h2>Columbia Coffee</h2>
                 <span class="text-[#A6A6A6]">$18.00</span>
               </div>
             </div>
-            <div class="online-coffee-img flex flex-col justify-center items-center">
+            <div data-aos="fade-right"  data-aos-duration="500" data-aos-delay="1200" class="online-coffee-img flex flex-col justify-center items-center">
               <img src="../Images/product-img-8-768x768.png" class="w-72" alt="img" />
               <div class="content  text-center">
                 <h2>Guatemala Coffee</h2>
@@ -596,55 +604,13 @@
         </div>
        </footer>
 
-       
-
-<!-- Terms modal -->
-<div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-    <div class="relative p-4 w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-            <!-- Modal header -->
-            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                    Terms of Service
-                </h3>
-                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
-                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
-                </button>
-            </div>
-            <!-- Modal body -->
-            <div class="p-4 md:p-5 space-y-4">
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
-                </p>
-                <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                    The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
-                </p>
-            </div>
-            <!-- Modal footer -->
-            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button data-modal-hide="default-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
-                <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 
-<div id="spinner" class="spinner-container  min-h-screen fixed left-0 top-0 w-full h-full  bg-black/90">
-  <div role="status" class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-    <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
-        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
-    </svg>
-    <span class="sr-only">Loading...</span>
-  </div>
-  </div> -->
-
     <!--Flowbite  -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- aos  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="../JavaScript/main.js"></script>
   </body>
 </html>
