@@ -87,11 +87,11 @@ signupForm.addEventListener("submit", (e) => {
 
   //  signup Function
   Register();
-  getLocation()
+  getLocation();
 });
 
 // signup Function
- const Register = async () => {
+const Register = async () => {
   isLoading = true;
   if (isLoading) {
     signUpBtn.disabled = true;
@@ -138,7 +138,7 @@ signupForm.addEventListener("submit", (e) => {
 };
 
 // get location
- getLocation = async () => {
+getLocation = async () => {
   try {
     const { data } = await axios.get("http://ip-api.com/json");
     localStorage.setItem("location", JSON.stringify(data));

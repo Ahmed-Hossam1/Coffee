@@ -48,7 +48,7 @@ const Login = async () => {
     );
     localStorage.setItem("token", data?.token);
     localStorage.setItem("user", JSON.stringify(data?.user));
-    location.href = "index.html";
+    window.location.href = "index.html";
   } catch (error) {
     // server validation
 

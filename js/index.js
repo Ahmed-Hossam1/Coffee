@@ -1,21 +1,13 @@
 let Nav = document.getElementById("nav");
 
 // change backgroundColor of nav
-export default function scroll() {
+window.onscroll = function scroll() {
   if (window.scrollY > 50) {
     Nav.classList.add("nav-scroll");
   } else {
     Nav.classList.remove("nav-scroll");
   }
-}
-window.onscroll = scroll;
-
-//  nav country
-const nav_country = document.getElementById("nav-country");
-const location = JSON.parse(localStorage.getItem("location"));
-if (location.countryCode) {
-  nav_country.innerHTML = location.countryCode;
-}
+};
 
 // scroll to top of page
 const btn_to_top = document.querySelector(".btn-to-top");
@@ -56,9 +48,8 @@ window.addEventListener("scroll", () => {
 // change between login and logout
 const loginbtn = document.getElementById("loginbtn");
 const user_menu_button = document.getElementById("user-menu-button");
-const token = JSON.parse(localStorage.getItem("token"));
+const token = localStorage.getItem("token");
 
-console.log(loginbtn, user_menu_button, token);
 if (token) {
   loginbtn.style.display = "none";
   user_menu_button.style.display = "block";
@@ -67,6 +58,7 @@ if (token) {
   user_menu_button.style.display = "none";
 }
 
+console.log("from index");
 const signout = document.getElementById("signout");
 
 // signout
@@ -94,3 +86,5 @@ if (user_name) {
 if (user_email) {
   user_email.innerHTML = user.email;
 }
+
+console.log("first");
