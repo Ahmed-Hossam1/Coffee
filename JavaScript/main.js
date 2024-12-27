@@ -12,9 +12,10 @@ window.onscroll = scroll;
 
 //  nav country
 const nav_country = document.getElementById("nav-country");
-nav_country.innerHTML = JSON.parse(
-  localStorage.getItem("location")
-)?.countryCode;
+const location = JSON.parse(localStorage.getItem("location"));
+if (location.countryCode) {
+  nav_country.innerHTML = location.countryCode;
+}
 
 // scroll to top of page
 const btn_to_top = document.querySelector(".btn-to-top");
@@ -70,7 +71,7 @@ const signout = document.getElementById("signout");
 signout.addEventListener("click", () => {
   localStorage.removeItem("token");
   localStorage.removeItem("user");
-  window.location = "home.html";
+  window.location = "index.html";
 });
 
 // user profile

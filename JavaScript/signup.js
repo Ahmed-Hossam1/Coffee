@@ -119,7 +119,7 @@ signupForm.addEventListener("submit", (e) => {
 
     localStorage.setItem("token", data?.token);
     localStorage.setItem("user", JSON.stringify(data?.user));
-    window.location = "home.html";
+    window.location = "index.html";
   } catch (error) {
     error.response.data.errors?.username?.map(
       (err) => (usernameError.textContent = err)
