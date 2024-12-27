@@ -27,6 +27,7 @@ LoginForm.addEventListener("submit", (e) => {
   }
 
   //  Login Function
+  getLocation()
   Login();
 });
 
@@ -59,5 +60,14 @@ const Login = async () => {
     loginbtn.disabled = false;
     loginbtn.style.cursor = "pointer";
     loginbtn.style.backgroundColor = "#1d4ed8";
+  }
+};
+
+const getLocation = async () => {
+  try {
+    const { data } = await axios.get("http://ip-api.com/json");
+    localStorage.setItem("location", JSON.stringify(data));
+  } catch (error) {
+    console.log("error", error);
   }
 };

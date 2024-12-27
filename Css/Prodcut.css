@@ -68,48 +68,27 @@ body {
   color: red;
 }
 
-/* Top overlay */
-.Top-overlay {
-  width: 100%;
-  height: 380px;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url("../Images/home-3-slider-image-3-new.jpg");
-  position: relative;
-}
-
-.Top-overlay::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Coffee Brands */
-.coffee-brands .heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+header {
+  background-color: #f0f0f0;
   text-align: center;
-  margin-bottom: 30px;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-.coffee-brands .heading h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  line-height: 1.2;
-  text-transform: capitalize;
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Photo Gallery */
-.photo-gallery > div {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
 }

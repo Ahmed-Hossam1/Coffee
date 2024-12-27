@@ -91,7 +91,7 @@ signupForm.addEventListener("submit", (e) => {
 });
 
 // signup Function
-const Register = async () => {
+ const Register = async () => {
   isLoading = true;
   if (isLoading) {
     signUpBtn.disabled = true;
@@ -119,7 +119,6 @@ const Register = async () => {
 
     localStorage.setItem("token", data?.token);
     localStorage.setItem("user", JSON.stringify(data?.user));
-
     window.location = "home.html";
   } catch (error) {
     error.response.data.errors?.username?.map(
@@ -139,7 +138,7 @@ const Register = async () => {
 };
 
 // get location
-const getLocation = async () => {
+ getLocation = async () => {
   try {
     const { data } = await axios.get("http://ip-api.com/json");
     localStorage.setItem("location", JSON.stringify(data));

@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  list-style: none;
+}
+
+/* Customize the entire scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track background color */
+  border-radius: 6px;
+}
+
+/* Customize the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #be9c79; /* Thumb color */
+}
+
+/* Customize the scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0805f; /* Thumb color */
+}
+
+.nav-scroll {
+  background-color: black;
+  transition: 0.2s ease;
+}
+
+.error {
+  color: red;
+}
+
+/* Top overlay */
+.Top-overlay {
+  width: 100%;
+  height: 380px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("../Images/home-3-slider-image-3-new.jpg");
+  position: relative;
+}
+
+.Top-overlay::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-items-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.cold-beverages {
+  background-image: url("../Images/new-new-h1-bacground-img-3.jpg");
+}

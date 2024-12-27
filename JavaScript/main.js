@@ -1,13 +1,14 @@
 let Nav = document.getElementById("nav");
 
 // change backgroundColor of nav
-window.onscroll = function () {
+export default function scroll() {
   if (window.scrollY > 50) {
     Nav.classList.add("nav-scroll");
   } else {
     Nav.classList.remove("nav-scroll");
   }
-};
+}
+window.onscroll = scroll;
 
 //  nav country
 const nav_country = document.getElementById("nav-country");

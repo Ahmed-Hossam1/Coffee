@@ -59,14 +59,6 @@ body {
   background: #a0805f; /* Thumb color */
 }
 
-.nav-scroll {
-  background-color: black;
-  transition: 0.2s ease;
-}
-
-.error {
-  color: red;
-}
 
 /* Top overlay */
 .Top-overlay {
@@ -89,27 +81,62 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Coffee Brands */
-.coffee-brands .heading {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.nav-scroll {
+  background-color: black;
+  transition: 0.2s ease;
+}
+
+.error {
+  color: red;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+}
+.content {
+  padding: 20px;
+}
+.content .author {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+.content h1 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+.content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.quote-section {
+  background-image: url("../Images/new-new-h1-bacground-img-3.jpg");    
+  padding: 50px 0;
+  margin: 20px 0px;
   text-align: center;
-  margin-bottom: 30px;
-  padding: 0 20px;
 }
 
-.coffee-brands .heading h1 {
-  font-size: 40px;
-  margin-bottom: 10px;
-  font-weight: 500;
-  line-height: 1.2;
-  text-transform: capitalize;
+.quote-section .quote {
+  font-size: 24px;
+  color: #000;
+  font-weight: bold;
 }
 
-/* Photo Gallery */
-.photo-gallery > div {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+.quote-section .author {
+  font-size: 18px;
+  color: #d2a679;
+}
+
+.main-image {
+  height: 700;
+  width: 1300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+}
+a {
+  color: rgb(191, 164, 10);
 }
