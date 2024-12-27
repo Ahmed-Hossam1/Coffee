@@ -56,8 +56,10 @@ window.addEventListener("scroll", () => {
 // change between login and logout
 const loginbtn = document.getElementById("loginbtn");
 const user_menu_button = document.getElementById("user-menu-button");
+const token = JSON.parse(localStorage.getItem("token"));
 
-if (localStorage.getItem("token")) {
+console.log(loginbtn, user_menu_button, token);
+if (token) {
   loginbtn.style.display = "none";
   user_menu_button.style.display = "block";
 } else {
