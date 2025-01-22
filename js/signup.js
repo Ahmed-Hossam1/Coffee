@@ -85,9 +85,9 @@ signupForm.addEventListener("submit", (e) => {
     repeat_passwordError.textContent = "";
   }
 
+  getLocation();
   //  signup Function
   Register();
-  getLocation();
 });
 
 // signup Function

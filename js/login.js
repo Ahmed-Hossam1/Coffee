@@ -26,8 +26,8 @@ LoginForm.addEventListener("submit", (e) => {
     return;
   }
 
-  //  Login Function
   getLocation()
+  //  Login Function
   Login();
 });
 
