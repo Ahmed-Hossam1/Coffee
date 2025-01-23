@@ -157,9 +157,9 @@ ion-icon {
   }
 }
 /* Media for smaller screens and a smaller grid */
-@media (max-width: 680px) {
+@media (max-width: 480px) {
   .tcontainer {
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: 1fr;
     row-gap: 20px;
   }
 
