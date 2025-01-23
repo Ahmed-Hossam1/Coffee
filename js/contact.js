@@ -54,7 +54,7 @@ MessageForm.addEventListener("submit", (e) => {
   }
 
   if (Email.value.trim() === "" || !Regex.test(Email.value)) {
-    emailError.textContent = "Please Enter a valid email";
+    emailError.textContent = "Please enter a valid Email";
   } else {
     emailError.textContent = "";
   }
